@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+/* --- GLOBAL RESET --- */
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- GENERAL STYLE --- */
+
+.lumina
+{
+    color: var(--lumina-fontcolor);
+    transition: all ease-in 0.5s;
+}
+
+.lumina:hover
+{
+    color: var(--lumina-fontcolor-hover);
+}
+
+/* --- BODY --- */
+
+html
+{
+    font-size: 16px;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    background-color: var(--main-bgcolor);
+    padding: 15px;
+    font-family: var(--general-font);
+    overflow-x: hidden;
+}
+
+/* --- HEADER --- */
+
+header
+{
+    border-radius: 0.75rem;
+}
+
+header
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 40px;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    width: 100%;
+    height: auto;
+    background-color: var(--main-bgcolor);
+}
+
+.logo-container 
+{
+    padding: 10px;
+}
+
+.logo-container h1
+{
+    font-size: 1.75rem;
+}
+
+header nav
+{
+    margin-left: auto;
+}
+
+nav ul.links-container
+{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul.links-container li a
+{
+    text-decoration: none;
+    color: var(--orange-main-fontcolor);
+    position: relative;
+    padding-bottom: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    
+}
+
+nav ul.links-container li a::after
+{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--orange-main-fontcolor);
+    transition: width 0.3s ease;
+}
+
+a:hover::after
+{
+    animation: fillBorder 0.5s forwards ;
+}
+
+
+header div.hire-container
+{
+    min-width: 200px;
+    height: auto;
+}
+
+div.hire-container button
+{
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px 10px 20px;
+    background-color: var(--hire-me-button-bgcolor);
+    border: none;
+    color: var(--hire-me-button-fontcolor);
+    font-family: var(--general-font);
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 1rem;
+    outline: 3px solid transparent;
+    transition: all ease-in 0.5s;
+}
+
+div.hire-container button:hover
+{
+    outline: 2px solid var(--hire-me-button-outline-color-hover );
+    color: var(--hire-me-button-outline-fontcolor-hover );
+}
+
+.burger-menu
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--burger-menu-bgcolor);
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    outline: 3px solid transparent;
+    transition: all ease-in 0.5s;
+    flex-shrink: 0;
+}
+
+.burger-menu:hover
+{
+    outline: 2px solid var(--burger-menu-line-outline-color-hover);
+}
+
+.line
+{
+    width: 100%;
+    height: 2px;
+    background-color: var(--burger-menu-line-color);
+}
+
+/* --- SIDEBAR --- */
+
+#sidebar
+{
+    width: 45%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--sidebar-bgcolor);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 40px 20px 40px 20px;
+    border-right: 2px solid var(--sidebar-border-color);
+}
+
+#sidebar .sidebar-header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#sidebar .lumina
+{
+    color: var(--lumina-sidebar-fontcolor);
+}
+
+#sidebar .lumina:hover
+{
+    color: var(--lumina-sidebar-fontcolor-hover);
+}
+
+#sidebar .close-sidebar-container
+{
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+}
+
+#sidebar .close-sidebar-container img
+{
+    width: 100%;
+    height: 100%;
+}
+
+#sidebar nav ul.links-container
+{
+    flex-direction: column;
+}
+
+#sidebar nav ul.links-container li a
+{
+    color: var(--blue-main-fontcolor);
+}
+
+#sidebar .hire-container
+{
+    width: 100%;
+}
+
+#sidebar .hire-container button
+{
+    background-color: var(--hire-me-sidebar-button-bgcolor);
+    color: var(--orange-main-fontcolor);
+}
+
+#sidebar nav ul.links-container li a::after
+{
+    background-color: var(--blue-main-fontcolor);
+}
+
+
+/* MEDIA QUERIES */
+/* 2xl */
+@media (max-width: 1536px) {}
+
+/* xl */
+@media (max-width: 1280px) {}
+
+/* lg + burger menu*/
+@media (max-width: 1024px) 
+{
+    header
+    {
+        justify-content: space-between;
+    }
+
+    header div.hire-container,
+    header nav
+    {
+        display: none;
+    }
+
+    div.burger-menu
+    {
+        display: flex;
+    }
+}
+
+/* md */
+@media (max-width: 768px) {}
+
+/* sm */
+@media (max-width: 640px) 
+{
+    #sidebar
+    {
+        width: 100%;
+    }
+}
+
+/* xs */
+@media (max-width: 475px) 
+{   
+    body
+    {
+        padding: 5px;
+    }
+
+    header
+    {
+        gap: 10px;
+    }
+}

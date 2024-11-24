@@ -1,0 +1,30 @@
+:root
+{
+    /* LUMINA */
+    --lumina-fontcolor : #ee8623;
+    --lumina-fontcolor-hover : #000080;
+    --lumina-sidebar-fontcolor : #000080;
+    --lumina-sidebar-fontcolor-hover : #5656b9;
+
+    /* -- COLORS -- */
+    --main-bgcolor : #FEFEFE ;
+    --main-bgcolor-secondary : #E1FBEE ;
+    --orange-main-fontcolor : #ee8623;
+    --blue-main-fontcolor : #000080;
+
+    --hire-me-button-bgcolor : #ee8623;
+    --hire-me-sidebar-button-bgcolor : #000080;
+    --hire-me-button-fontcolor : #FEFEFE;
+    --hire-me-button-outline-color-hover : #000080;
+    --hire-me-button-outline-fontcolor-hover : #000080;
+
+    --burger-menu-bgcolor : #ee8623;
+    --burger-menu-line-color : white; 
+    --burger-menu-line-outline-color-hover : #000080; 
+
+    --sidebar-bgcolor : #ee8623;
+    --sidebar-border-color : #000080;
+
+    /* FONT */
+    --general-font : "Alata", sans-serif;
+}
