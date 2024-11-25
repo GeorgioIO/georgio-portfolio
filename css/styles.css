@@ -10,13 +10,13 @@
 
 /* --- GENERAL STYLE --- */
 
-.lumina
+.highlight
 {
     color: var(--lumina-fontcolor);
     transition: all ease-in 0.5s;
 }
 
-.lumina:hover
+.highlight:hover
 {
     color: var(--lumina-fontcolor-hover);
 }
@@ -34,16 +34,17 @@ body
     flex-direction: column;
     height: auto;
     background-color: var(--main-bgcolor);
-    padding: 15px;
     font-family: var(--general-font);
     overflow-x: hidden;
+    gap: 20px;
 }
 
 /* --- HEADER --- */
 
-header
+header,
+#hero
 {
-    border-radius: 0.75rem;
+    padding: 1.25rem 1rem 1.25rem 1rem;
 }
 
 header
@@ -52,7 +53,6 @@ header
     justify-content: space-evenly;
     align-items: center;
     gap: 40px;
-    padding: 1rem 0.5rem 1rem 0.5rem;
     width: 100%;
     height: auto;
     background-color: var(--main-bgcolor);
@@ -176,7 +176,7 @@ div.hire-container button:hover
     left: 0;
     height: 100%;
     background-color: var(--sidebar-bgcolor);
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
@@ -241,6 +241,105 @@ div.hire-container button:hover
     background-color: var(--blue-main-fontcolor);
 }
 
+/* --- HERO --- */
+
+#hero
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--main-bgcolor-secondary);
+    width: 100%;
+    height: auto;
+}
+
+.hero-image,
+.hero-text
+{
+    height: 440px;
+}
+
+.hero-text
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45%;
+    height: auto;
+    gap: 10px;
+    
+}
+
+.hero-image
+{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.hero-text .hero-greeting,
+.hero-text .hero-heading,
+.hero-text .hero-description
+{
+    padding: 10px;
+}
+
+.hero-text .hero-greeting p
+{
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.hero-text .hero-heading h1
+{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.hero-text .hero-description p
+{
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.hero-image img
+{
+    width: 375px;
+    height: auto;
+}
+
+#hero-text .hero-text
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hero-buttons
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-buttons .hire-container
+{
+    width: 30%;
+}
+
+#hero .social-links-container ul
+{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.social-links-container li
+{
+    flex-shrink: 0;
+}
 
 /* MEDIA QUERIES */
 /* 2xl */
@@ -267,10 +366,39 @@ div.hire-container button:hover
     {
         display: flex;
     }
+
+    #hero
+    {
+        justify-content: space-evenly;
+    }
+
+    .hero-text
+    {
+        gap: 0px;
+    }
 }
 
 /* md */
-@media (max-width: 768px) {}
+@media (max-width: 768px) 
+{
+    #hero
+    {
+        gap: 20px;
+    }
+
+    .hero-buttons
+    {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .hero-buttons .hire-container,
+    .hero-buttons .social-links-container
+    {
+        width: 100%;
+    }
+}
 
 /* sm */
 @media (max-width: 640px) 
@@ -278,6 +406,22 @@ div.hire-container button:hover
     #sidebar
     {
         width: 100%;
+    }
+
+
+    .hero-text
+    {
+        width: 100%;
+    }
+
+    .hero-image
+    {
+        display: none;
+    }
+
+    .hero-text .hero-description p
+    {
+        padding-bottom: 50px;
     }
 }
 
