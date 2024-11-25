@@ -25,6 +25,10 @@
     --sidebar-bgcolor : #ee8623;
     --sidebar-border-color : #000080;
 
+    --about-me-main-sub-header-fontcolor : #85918b ;
+    --about-me-image-bordercolor : #ee8623 ;
+    --about-me-contact-bordercolor : #ee8623 ;
+
     /* FONT */
     --general-font : "Alata", sans-serif;
 }

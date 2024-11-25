@@ -21,6 +21,19 @@
     color: var(--lumina-fontcolor-hover);
 }
 
+.section-header
+{
+    text-align: center;
+    padding: 10px 10px 50px 10px;
+}
+
+.section-header h1
+{
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
 /* --- BODY --- */
 
 html
@@ -42,7 +55,8 @@ body
 /* --- HEADER --- */
 
 header,
-#hero
+#hero,
+#about-me
 {
     padding: 1.25rem 1rem 1.25rem 1rem;
 }
@@ -192,12 +206,12 @@ div.hire-container button:hover
     width: 100%;
 }
 
-#sidebar .lumina
+#sidebar .highlight
 {
     color: var(--lumina-sidebar-fontcolor);
 }
 
-#sidebar .lumina:hover
+#sidebar .highlight:hover
 {
     color: var(--lumina-sidebar-fontcolor-hover);
 }
@@ -341,12 +355,154 @@ div.hire-container button:hover
     flex-shrink: 0;
 }
 
+/* --- ABOUT ME --- */
+
+#about-me
+{
+    background-color: var(--main-bgcolor);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+    padding: 50px;
+}
+
+.about-me-body
+{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 40px;
+}
+
+.about-me-image
+{
+    width: 40%;
+    height: auto;
+    border: 2px solid var(--about-me-image-bordercolor );
+    border-radius: 0.75rem;
+}
+
+.about-me-image img
+{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    height: 100%;
+    border-radius: 0.75rem;
+
+}
+
+.about-text
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+    height: auto;
+    width: 50%;
+}
+
+.about-text .about-text-description,
+.about-text .about-text-headings .about-main-header,
+.about-text .about-text-headings .about-main-sub-header
+{
+    padding: 10px;
+}
+
+.about-text .about-text-headings .about-main-header
+{
+    padding-bottom: 0;
+}
+
+.about-text .about-text-headings .about-main-sub-header
+{
+    padding-top: 0;
+}
+
+.about-text .about-text-headings .about-main-sub-header p
+{
+    color: var(--about-me-main-sub-header-fontcolor);
+    font-weight: 700;
+    line-height: 32px;
+}
+
+.about-text .about-text-description
+{
+    
+    min-width: 200px;
+}
+
+.about-text .about-text-description
+{
+   font-size: 18px;
+   font-weight: 600;
+   line-height: 28px;
+}
+
+.about-text .contacts-container
+{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 20px;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+.about-text .contacts-container .email,
+.about-text .contacts-container .phone,
+.about-text .contacts-container .office
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0px 10px 0px 10px;
+}
+
+.about-text .phone-icon-container,
+.about-text .email-icon-container,
+.about-text .office-icon-container
+{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid var(--about-me-contact-bordercolor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    
+}
+
+.about-text .phone-icon-container img,
+.about-text .email-icon-container img,
+.about-text .office-icon-container img
+{
+    width: 25px;
+    height: 25px;
+}
+
+.about-text .hire-container
+{
+    width: 40%;
+    min-width: 161px;
+}
 /* MEDIA QUERIES */
 /* 2xl */
 @media (max-width: 1536px) {}
 
 /* xl */
-@media (max-width: 1280px) {}
+@media (max-width: 1280px) 
+{
+    #about-me
+    {
+        padding: 50px 20px 50px 20px;
+    }
+
+}
 
 /* lg + burger menu*/
 @media (max-width: 1024px) 
@@ -398,6 +554,26 @@ div.hire-container button:hover
     {
         width: 100%;
     }
+
+    /* ABOUT ME */
+    .about-me-body,
+    .about-me-image,
+    .about-text
+    {
+        width: 100%;
+    }
+
+
+
+    .about-me-body
+    {
+        flex-direction: column; 
+        
+        justify-content: stretch; 
+        align-items: center;
+    }
+
+
 }
 
 /* sm */
@@ -428,13 +604,26 @@ div.hire-container button:hover
 /* xs */
 @media (max-width: 475px) 
 {   
-    body
+    /* body
     {
         padding: 5px;
-    }
+    } */
 
     header
     {
         gap: 10px;
+    }
+
+    .about-text .hire-container
+    {
+        width: 100%;
+        min-width: 161px;
+    }
+
+    .about-text .contacts-container .email p,
+    .about-text .contacts-container .phone p,
+    .about-text .contacts-container .office p
+    {
+        font-size: 14px;
     }
 }
