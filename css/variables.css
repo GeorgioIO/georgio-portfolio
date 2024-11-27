@@ -33,6 +33,15 @@
     --technical-skill-square-fontcolor-hover : #ee8623;
     --technical-skill-square-outline-color-hover : #ee8623;
     --technical-skill-square-shadow-color-hover : #ee8623;
+
+    --services-service-card-bgcolor : #E1FBEE;
+    --services-service-icon-outline-color : #ee8623;
+    --services-service-icon-border-color : gray;
+
+    --get-started-button-bgcolor : #ee8623;
+    --get-started-outline-color-hover : #000080;
+    --get-started-fontcolor-hover : #000080;
+    --get-started-fontcolor : #FFFFFF;
     /* FONT */
-    --general-font : "Rubik", sans-serif;
+    --general-font : "Montserrat", sans-serif;
 }
