@@ -29,6 +29,10 @@
     --about-me-image-bordercolor : #ee8623 ;
     --about-me-contact-bordercolor : #ee8623 ;
 
+    --technical-skill-square-outline-color : #808080;
+    --technical-skill-square-fontcolor-hover : #ee8623;
+    --technical-skill-square-outline-color-hover : #ee8623;
+    --technical-skill-square-shadow-color-hover : #ee8623;
     /* FONT */
-    --general-font : "Alata", sans-serif;
+    --general-font : "Rubik", sans-serif;
 }
