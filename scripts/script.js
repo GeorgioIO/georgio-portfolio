@@ -3,8 +3,6 @@ const CloseSidebarButton = document.querySelector(".close-sidebar");
 const projectTogglerButton = document.querySelectorAll(".project-toggler"); /* Get project toggler button*/
 
 
-
-
 // TITLE : EVENT LISTENERS
 burgerMenu.addEventListener("click", toggleSidebar);
 

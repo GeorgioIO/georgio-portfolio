@@ -889,7 +889,6 @@ div.hire-container button:hover
 
 .project-button
 {
-    margin-left: auto;
     display: flex;
     gap: 10px;
 }
