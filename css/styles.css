@@ -11,6 +11,14 @@
     box-sizing: border-box;
 }
 
+/* Projects photo  */
+
+div#Builderon-project
+{
+    background: url("../images/builderon-project-photo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 /* --- GENERAL STYLE --- */
 
 .highlight
@@ -750,6 +758,176 @@ div.hire-container button:hover
     color: var(--get-started-fontcolor-hover);
 }
 
+/* PROJECTS */
+#projects
+{
+    background-color: var(--main-bgcolor-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 30px;
+    padding: 30px;
+}
+
+.project-togglers
+{
+    display: flex;
+    gap: 5px;
+    min-width: 296px;
+    height: 50px;
+    background-color: var(--project-toggler-bgcolor);
+    
+}
+
+.clients-project,
+.self-project
+{
+    width: 100%;
+    height: 100%;
+    transition: border-bottom ease-in 0.1s;
+}
+
+.clients-project button,
+.self-project button
+{
+
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 18px;
+    color: var(--project-toggler-fontcolor);
+    background-color: var(--project-toggler-buttons-bgcolor);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3 ease;
+    padding: 12px;
+}
+
+.clients-project button
+{
+    border-left: 5px solid var(--project-toggler-buttons-bordercolor);
+}
+
+.self-project button
+{
+    border-right: 5px solid var(--project-toggler-buttons-bordercolor);
+}
+
+.active
+{
+    border-bottom: 5px solid #ee8623;   
+}
+
+.projects-container-clients
+{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.projects-container-self
+
+{
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.hidden-projects 
+{
+    display: none;
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+.visible-projects
+{
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.project
+{
+    background-color: red;
+    width: 420px;
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 0.65rem;
+}
+
+.project-body
+{
+    width: 100%;
+    height: 30%;
+    background-color: var(--project-body-bgcolor);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: var(--project-body-fontcolor);
+    border-bottom-left-radius: 0.65rem;
+    border-bottom-right-radius: 0.65rem;
+
+}
+
+.project-body .project-title .project-main-title
+{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.project-button
+{
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+}
+
+.project-button .show-testimonial,
+.project-button .go-to-website
+{
+    width: 35px;
+    height: 35px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.project-button button
+{
+    width: 100%;
+    height: 100%;
+    border: 3px solid black;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-button button img
+{
+    width: 20px;
+    height: 20px;
+}
+
+
 /* MEDIA QUERIES */
 /* 2xl */
 @media (max-width: 1536px) {}
@@ -757,6 +935,7 @@ div.hire-container button:hover
 /* xl */
 @media (max-width: 1280px) 
 {
+    /* ABOUT ME */
     #about-me
     {
         padding: 50px 20px 50px 20px;
@@ -767,6 +946,7 @@ div.hire-container button:hover
 /* lg + burger menu*/
 @media (max-width: 1024px) 
 {
+    /* HEADER */
     header
     {
         justify-content: space-between;
@@ -783,6 +963,7 @@ div.hire-container button:hover
         display: flex;
     }
 
+    /* HERO */
     #hero
     {
         justify-content: space-evenly;
@@ -792,11 +973,18 @@ div.hire-container button:hover
     {
         gap: 0px;
     }
+
+    /* PROJECTS */
+    .project
+    {
+        width: 350px;
+    }
 }
 
 /* md */
 @media (max-width: 768px) 
 {
+    /* HERO */
     #hero
     {
         gap: 20px;
@@ -822,8 +1010,6 @@ div.hire-container button:hover
     {
         width: 100%;
     }
-
-
 
     .about-me-body
     {
@@ -873,17 +1059,25 @@ div.hire-container button:hover
         padding: 8px;
 
     }
+
+    /* PROJECTS */
+    .project
+    {
+        width: 500px;
+
+    }
 }
 
 /* sm */
 @media (max-width: 640px) 
 {
+    /* SIDEBAR */
     #sidebar
     {
         width: 100%;
     }
 
-
+    /* HERO */
     .hero-text
     {
         width: 100%;
@@ -920,11 +1114,13 @@ div.hire-container button:hover
         padding: 5px;
     } */
 
+    /* HEADER */
     header
     {
         gap: 10px;
     }
 
+    /* ABOUT ME */
     .about-text .hire-container
     {
         width: 100%;
@@ -939,6 +1135,16 @@ div.hire-container button:hover
     }
 
     /* SKILLS */
+    #my-skills
+    {
+        padding: 50px 20px 50px 20px;
+    }
+
+    .technical-skills
+    {
+        padding: 0;
+
+    }
 
     .my-skills-content-container
     {
@@ -957,14 +1163,14 @@ div.hire-container button:hover
 
     .technical-skills-container .technical-skill
     {
-        width: 90px;
-        height: 90px;
+        width: 105px;
+        height: 105px;
     }
 
     .technical-skills-container .technical-skill img
     {
-        width: 40px;
-        height: 40px;
+        width: 45px;
+        height: 45px;
     }
 
     /* SERVICES */
@@ -981,11 +1187,35 @@ div.hire-container button:hover
         padding: 8px;
 
     }
+
+    .section-header h1
+    {
+        font-size: 34px;
+        text-wrap: nowrap;
+    }
+
+    /* PROJECTS */
+
+    #projects
+    {
+        padding: 30px 20px 30px 20px;
+    }
+
+    .project,
+    .project-togglers
+    {
+        min-width: 100%;
+    }
 }
 
-@media (max-width: 347px) 
+@media (max-width: 365px) 
 { 
-
+    /* SKILLS */
+    #my-skills
+    {
+        justify-content: center;
+        align-items: center;
+    }
     .section-header h1
     {
         font-size: 32px;

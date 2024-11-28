@@ -42,6 +42,16 @@
     --get-started-outline-color-hover : #000080;
     --get-started-fontcolor-hover : #000080;
     --get-started-fontcolor : #FFFFFF;
+
+    --project-toggler-bgcolor : #ee8623;
+    --project-toggler-fontcolor : #c06e22;
+    --project-toggler-buttons-bordercolor : #ee8623;
+    --project-toggler-buttons-bgcolor : #FEFEFE;
+    --project-toggler-buttons-bgcolor-active : #ee8623;
+    --project-toggler-buttons-fontcolor-active : #FEFEFE;
+    --project-toggler-buttons-bordercolor-active : #FEFEFE;
+    --project-body-bgcolor : rgba(0, 0, 0, 0.479);
+    --project-body-fontcolor : #FEFEFE;
     /* FONT */
     --general-font : "Montserrat", sans-serif;
 }
