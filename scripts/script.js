@@ -1,10 +1,21 @@
 const burgerMenu = document.querySelector(".burger-menu");
 const CloseSidebarButton = document.querySelector(".close-sidebar");
 const projectTogglerButton = document.querySelectorAll(".project-toggler"); /* Get project toggler button*/
-
-
+const switchers = document.querySelectorAll(".testimonial-switcher");
 // TITLE : EVENT LISTENERS
 burgerMenu.addEventListener("click", toggleSidebar);
+
+
+// -SUB EVENT LISTENERS- HANDLERS FOR SWITCHERS TESTIMONIALS
+switchers.forEach(switcher => {
+    switcher.addEventListener("click" , () => {
+        removeSwitchActClass(event.target , switchers);
+        const testimonials = document.querySelectorAll(".testimonial")
+        console.log(testimonials)
+        toggleTestimonials(event.target , testimonials);
+
+    })
+});
 
 // -SUB EVENT LISTENERS- HANDLER TO LISTEN FOR CLICKS ON PROJECT TOGGLERS
 projectTogglerButton.forEach(button => {
@@ -44,6 +55,7 @@ projectTogglerButton.forEach(button => {
     })
 })
 
+
 // -SUB EVENT LISTENERS- HANDLER TO CLOSE THE SIDEBAR
 CloseSidebarButton.addEventListener("click" , (event) => {
     const sideBar = document.querySelector("#sidebar");
@@ -78,4 +90,37 @@ function toggleSidebar ()
         burgerMenu.removeEventListener("click", toggleSidebar);
         sideBar.style.display = "flex";
     }
+}
+
+// -SUB FUNCTION- FUNCTION TO CHANGE BETWEEN TESTIMONIALS
+function toggleTestimonials(targetedSwitch , testimonials)
+{
+    const targetedValue = targetedSwitch.dataset.name;
+
+    testimonials.forEach(testimonial => {
+        if(testimonial.id === targetedValue)
+        {
+            testimonial.style.display = "flex";
+        }
+        else
+        {
+            testimonial.style.display = "none";
+        }
+    });
+}
+// -SUB FUNCTIONS- FUNCTION TO REMOVE SWITCH-ACTIVE CLASS FROM NOT CLICKED BUTTONS
+function removeSwitchActClass (targetedSwitch , switchers)
+{
+    const targetedValue = targetedSwitch.dataset.name
+
+    switchers.forEach(switcher => {
+        if (targetedValue == switcher.dataset.name)
+        {
+            switcher.classList.add("switcher-active");
+        }
+        else
+        {
+            switcher.classList.remove("switcher-active");
+        } 
+    });
 }

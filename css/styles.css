@@ -18,6 +18,23 @@ div#Builderon-project
     background: url("../images/builderon-project-photo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+}
+
+div#Calculator-project
+{
+    background: url("../images/calculator-project-photo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+div#Etch-project
+{
+    background: url("../images/etch-a-sketch-photo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 /* --- GENERAL STYLE --- */
 
@@ -36,7 +53,7 @@ div#Builderon-project
 .section-header
 {
     text-align: center;
-    padding: 10px 10px 50px 10px;
+    padding: 10px 10px 25px 10px;
 }
 
 .section-header h1
@@ -926,6 +943,93 @@ div.hire-container button:hover
     height: 20px;
 }
 
+/* TESTIMONIALS  */
+
+#testimonials
+{
+    background-color: var(--main-bgcolor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 30px;
+    padding: 30px;
+}
+
+.testimonial-switchers
+{
+    display: flex;
+    gap: 10px;
+}
+
+.testimonial-body
+{
+    width: 100%;
+    height: auto;
+    padding: 15px 40px 15px 40px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.testimonial
+{
+    width: 80%;
+    height: auto;
+    border: 2px solid #ee8623;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border-radius: .75rem;
+}
+
+.testimonial-text
+{
+    width: 80%;
+    height: auto;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+.attributioner
+{
+    width: 20%;
+    min-width: 215.67px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    flex-shrink: 0;
+}
+
+.attributioner .attributioner-photo
+{
+    width: 100%;
+    height: 211.67px;
+    background-color: black;
+    flex-shrink: 0;
+    border-radius: 0.75rem;
+}
+
+
+.attributioner .attributioner-info
+{
+    padding: 10px;
+}
+.testimonial-switcher
+{
+    width: 5px;
+    height: 5px;
+    padding: 2px;
+    border: 2px solid var(--testimonials-switcher-bordercolor);
+    border-radius: 50%;
+}
+
+.switcher-active
+{
+    background-color: var(--testimonials-switcher-bgcolor-active);
+}
 
 /* MEDIA QUERIES */
 /* 2xl */
@@ -978,6 +1082,19 @@ div.hire-container button:hover
     {
         width: 350px;
     }
+
+    /* TESTIMONIALS */
+    .testimonial
+    {
+        width: 100%;
+    }
+
+    .section-header h1
+    {
+        line-height: 34px;
+    }
+
+
 }
 
 /* md */
@@ -1067,6 +1184,42 @@ div.hire-container button:hover
     }
 }
 
+@media (max-width: 660px) 
+{
+    .testimonial
+    {
+        flex-direction: column-reverse;
+    }
+    
+    .testimonial-text
+    {
+        width: 100%;
+    }
+
+    .attributioner
+    {
+        flex-direction: row;
+        min-width: 100%;
+    }
+
+    .attributioner-photo,
+    .attributioner-info
+    {
+        width: 50% !important;
+    }
+
+    .attributioner-photo
+    {
+        min-width: 229.5px;
+    }
+
+    .attributioner-info h1
+    {
+        font-size: 28px;
+    }
+}
+
+
 /* sm */
 @media (max-width: 640px) 
 {
@@ -1102,6 +1255,44 @@ div.hire-container button:hover
     .other-skills
     {
         max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) 
+{   
+
+    .attributioner
+    {
+        flex-direction: column;
+    }
+
+    .attributioner-photo,
+    .attributioner-info
+    {
+        width: 100% !important;
+        
+    }
+
+    .attributioner-photo
+    {
+        min-width: 229.5px;
+        height: 300px !important;
+    }
+
+    .attributioner-info h1
+    {
+        font-size: 28px;
+    }
+
+    /* TESTIMONIALS */
+    #testimonials
+    {
+        padding: 35px 20px 35px 20px ;
+    }
+    
+    .testimonial-body
+    {
+        padding: 20px 0px 20px 0px;
     }
 }
 
@@ -1189,8 +1380,8 @@ div.hire-container button:hover
 
     .section-header h1
     {
-        font-size: 34px;
-        text-wrap: nowrap;
+        font-size: 32px;
+        text-wrap: wrap;
     }
 
     /* PROJECTS */
@@ -1205,6 +1396,23 @@ div.hire-container button:hover
     {
         min-width: 100%;
     }
+
+    /* TESTIMONIALS */
+    #testimonials
+    {
+        padding: 35px 20px 35px 20px ;
+        gap: 0px;
+    }
+
+    .testimonial-body
+    {
+        padding: 40px 0px 40px 0px;
+    }
+
+    .attributioner-photo
+    {
+        min-width: 100%;
+    }
 }
 
 @media (max-width: 365px) 
@@ -1215,12 +1423,7 @@ div.hire-container button:hover
         justify-content: center;
         align-items: center;
     }
-    .section-header h1
-    {
-        font-size: 32px;
-        text-wrap: nowrap;
-    }
-
+ 
     .my-skills-content-container
     {
         width: 240px;

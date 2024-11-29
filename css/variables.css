@@ -52,6 +52,9 @@
     --project-toggler-buttons-bordercolor-active : #FEFEFE;
     --project-body-bgcolor : rgba(0, 0, 0, 0.479);
     --project-body-fontcolor : #FEFEFE;
+
+    --testimonials-switcher-bordercolor : grey;
+    --testimonials-switcher-bgcolor-active : grey;
     /* FONT */
     --general-font : "Montserrat", sans-serif;
 }
