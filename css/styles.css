@@ -101,6 +101,7 @@ header
     width: 100%;
     height: auto;
     background-color: var(--main-bgcolor);
+    
 }
 
 .logo-container 
@@ -1161,7 +1162,7 @@ div.hire-container button:hover
 
 .first-lastname-container .first-name input,
 .first-lastname-container .last-name input,
-.email input,
+form .email input,
 .phone-number input,
 .message textarea,
 .brand-info .brand-name input,
@@ -1191,8 +1192,8 @@ form textarea:focus,
     border: 3px solid var(--contact-fields-bordercolor-focus);
 }
 
-.email,
-.phone-number
+form .email,
+form .phone-number
 {
     position: relative;
     width: 100%;
