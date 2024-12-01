@@ -65,11 +65,27 @@ div#Etch-project
     line-height: 24px;
 }
 
+::-webkit-scrollbar {
+    width: 12px;
+  }
+
+::-webkit-scrollbar-track {
+background: #FEFEFE;
+}
+
+::-webkit-scrollbar-thumb {
+background-color: #ee8623;
+border-radius: 10px;
+border: 3px solid #FEFEFE;
+}
+  
+
 /* --- BODY --- */
 
 html
 {
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 body
@@ -135,6 +151,7 @@ nav ul.links-container li a
     padding-bottom: 5px;
     font-size: 20px;
     font-weight: 500;
+    
     
 }
 
@@ -262,14 +279,24 @@ div.hire-container button:hover
     height: 100%;
 }
 
+#sidebar nav
+{
+    width: 100%;
+    text-align: center;
+}
+
 #sidebar nav ul.links-container
 {
     flex-direction: column;
+    width: 100%;
 }
+
+
 
 #sidebar nav ul.links-container li a
 {
     color: var(--blue-main-fontcolor);
+    font-size: 28px;
 }
 
 #sidebar .hire-container
@@ -1251,6 +1278,7 @@ form .phone-number
     width: 200px;
     min-width: 200px;
     height: 40px;
+    position: relative;
 }
 
 .submit-form input
@@ -1258,12 +1286,20 @@ form .phone-number
     width: 100%;
     height: 100%;
     border-radius: .75rem;
-    border: none;
     background-color: var(--contact-submit-btn-bgcolor);
+    border: none;
     color: var(--contact-submit-btn-fontgcolor);
     font-family: var(--general-font);
-    font-weight: 500;
     font-size: 16px;
+    font-weight: 500;
+    outline: 3px solid transparent;
+    transition: all ease-in 0.5s;
+}
+
+.submit-form input:hover
+{
+    outline: 2px solid var(--contact-submit-btn-outline-hover);
+    color: var(--contact-submit-btn-fontgcolor-hover);
 }
 
 /* FOOTER */
@@ -1387,6 +1423,12 @@ form .phone-number
 /* md */
 @media (max-width: 768px) 
 {
+    #sidebar
+    {
+        padding: 40px 10px 40px 10px;
+    }
+
+
     /* HERO */
     #hero
     {
@@ -1432,8 +1474,6 @@ form .phone-number
     {
         width: 100%;
     }
-
-
 
     .my-skill-sub-header
     {
@@ -1627,12 +1667,12 @@ form .phone-number
 
     /* FOOTER */
 
-    nav ul.links-container
+    #footer nav ul.links-container
     {
         gap: 10px;
     }
 
-    nav ul.links-container li a
+    #footer nav ul.links-container li a
     {
         font-size: 20px;
         
@@ -1814,7 +1854,7 @@ form .phone-number
     }  
     
     /* FOOTER */
-    nav ul.links-container li a
+    #footer nav ul.links-container li a
     {
         font-size: 14px;   
     }

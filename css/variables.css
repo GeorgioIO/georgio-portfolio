@@ -64,7 +64,9 @@
     --contact-fields-bordercolor-focus : #ee8623; 
     --contact-fields-bgcolor : #FEFEFE; 
     --contact-submit-btn-bgcolor : #ee8623; 
-    --contact-submit-btn-fontgcolor : #000080; 
+    --contact-submit-btn-fontgcolor : #FEFEFE; 
+    --contact-submit-btn-fontgcolor-hover : #000080; 
+    --contact-submit-btn-outline-hover : #000080; 
 
     --footer-separator-bgcolor : #ee8623;
     /* FONT */
