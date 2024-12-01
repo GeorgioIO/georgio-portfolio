@@ -55,6 +55,16 @@
 
     --testimonials-switcher-bordercolor : grey;
     --testimonials-switcher-bgcolor-active : grey;
+
+
+    --contact-bgcolor : #FEFEFE;
+    --contact-image-quote-color : #FFFFFF; 
+    --contact-form-bordercolor : #ee8623; 
+    --contact-fields-bordercolor : grey; 
+    --contact-fields-bordercolor-focus : #ee8623; 
+    --contact-fields-bgcolor : #FEFEFE; 
+    --contact-submit-btn-bgcolor : #ee8623; 
+    --contact-submit-btn-fontgcolor : #000080; 
     /* FONT */
-    --general-font : "Montserrat", sans-serif;
+    --general-font : "Signika", sans-serif;
 }

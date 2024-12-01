@@ -2,8 +2,32 @@ const burgerMenu = document.querySelector(".burger-menu");
 const CloseSidebarButton = document.querySelector(".close-sidebar");
 const projectTogglerButton = document.querySelectorAll(".project-toggler"); /* Get project toggler button*/
 const switchers = document.querySelectorAll(".testimonial-switcher");
+const projectChoiceBtns = document.querySelectorAll("#rb1");
+
+
 // TITLE : EVENT LISTENERS
 burgerMenu.addEventListener("click", toggleSidebar);
+
+// -SUB EVENT LISTENERS- HANDLER FOR RADIO BUTTONS IN CONTACT FORM
+projectChoiceBtns.forEach(radio => {
+    radio.addEventListener("click" , (event) => {
+        const projectDiv = document.querySelector(".project-fields");
+        if (event.target.value == "project")
+        {
+            projectDiv.style.display = "flex";
+            projectDiv.classList.add("expand-project-fields");   
+        }
+        else
+        {
+             
+            projectDiv.style.display = "none";
+            projectDiv.classList.add("collapse-project-fields"); 
+            projectDiv.classList.remove("expand-project-fields");   
+             
+
+        }
+    })
+})
 
 
 // -SUB EVENT LISTENERS- HANDLERS FOR SWITCHERS TESTIMONIALS

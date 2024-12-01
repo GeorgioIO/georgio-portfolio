@@ -10,3 +10,24 @@
         width: 100%;
     }
 }
+
+@keyframes showProjectFields
+{
+    0%
+    {
+        transform: translateX(-5%);
+    }
+
+    100%
+    {
+        transform: translateX(0);
+    }
+}
+
+
+
+.expand-project-fields
+{
+    animation: showProjectFields 0.3s ease-in-out forwards;
+}
+

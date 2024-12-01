@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap');
 /* --- GLOBAL RESET --- */
 
 *
@@ -1031,6 +1033,236 @@ div.hire-container button:hover
     background-color: var(--testimonials-switcher-bgcolor-active);
 }
 
+/* CONTACT */
+
+#contact
+{
+    background-color: var(--main-bgcolor-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 30px;
+    padding: 30px;
+}
+
+#contact .form-container
+{
+    width: 85%;
+    height: 100%;
+    display: flex;
+    border-radius: 0.75rem;
+}
+
+.form-image
+{
+    width: 45%;
+    position: relative;
+    
+}
+
+.form-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.form-image img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.form-image-quote
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.form-image-quote h2
+{
+    text-wrap: nowrap;
+    font-size: 34px;
+    color: var(--contact-image-quote-color);
+}
+
+.form-image-quote h2 span
+{
+    font-size: 50px;
+    font-family: "Caveat", cursive;
+    color: var(--orange-main-fontcolor);
+}
+
+.form-container form 
+{
+    width: 55%;
+    height: 100%;
+    border-top: 2px solid var(--contact-form-bordercolor);
+    border-bottom: 2px solid var(--contact-form-bordercolor);
+    border-right: 2px solid var(--contact-form-bordercolor);
+    border-top-right-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+    position: relative;
+    background-color: var(--contact-bgcolor);
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.form-blob 
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+}
+
+.form-blob img
+{
+    display: block;
+    border-top-right-radius: 0.75rem;
+    width: 100%;
+    margin: 0;
+}
+
+.first-lastname-container,
+.contact-choice,
+.brand-info
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    position: relative;
+    gap: 20px;
+}
+
+.first-lastname-container .first-name,
+.first-lastname-container .last-name,
+.brand-info .brand-name,
+.brand-info .brand-type,
+.budget input
+{
+    width: 50%;
+    height: 40px;
+}
+
+.first-lastname-container .first-name input,
+.first-lastname-container .last-name input,
+.email input,
+.phone-number input,
+.message textarea,
+.brand-info .brand-name input,
+.brand-info .brand-type input,
+.budget input
+{
+
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: var(--contact-fields-bgcolor);
+    border-bottom: 3px solid var(--contact-fields-bordercolor);
+    padding: 10px;
+    font-size: 18px;
+    transition: border 0.2s ease-in;
+    border-radius: 0.25rem;
+}
+
+.first-lastname-container .first-name input:focus,
+.first-lastname-container .last-name input:focus,
+form input:focus,
+form textarea:focus,
+.brand-info .brand-name input:focus,
+.brand-info .brand-type input:focus
+{
+    outline: none;
+    border: 3px solid var(--contact-fields-bordercolor-focus);
+}
+
+.email,
+.phone-number
+{
+    position: relative;
+    width: 100%;
+    height: 40px;
+}
+
+.contact-choice
+{
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+.inquiry-radio,
+.project-radio
+{
+    display: flex;
+    gap: 10px;
+    position: relative;
+    align-items: center;
+}
+
+.message
+{
+    height:80px;
+    position: relative;
+}
+
+.message textarea
+{
+    resize: none;
+}
+
+.project-fields
+{
+    padding-top: 8px;
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    gap: 35px;
+    transform: translateX(-5%); /* Start hidden above */
+}
+
+.budget
+{
+    width: 50%;
+    height: 40px;
+    position: relative;
+}
+
+
+.submit-form
+{
+    width: 200px;
+    min-width: 200px;
+    height: 40px;
+}
+
+.submit-form input
+{
+    width: 100%;
+    height: 100%;
+    border-radius: .75rem;
+    border: none;
+    background-color: var(--contact-submit-btn-bgcolor);
+    color: var(--contact-submit-btn-fontgcolor);
+    font-family: var(--general-font);
+    font-weight: 500;
+    font-size: 16px;
+}
 /* MEDIA QUERIES */
 /* 2xl */
 @media (max-width: 1536px) {}
@@ -1096,6 +1328,16 @@ div.hire-container button:hover
 
 
 }
+
+@media (max-width: 900px) 
+{
+    /* CONTACT */
+    #contact .form-container
+    {
+        width: 100%;
+    }
+}
+
 
 /* md */
 @media (max-width: 768px) 
@@ -1182,6 +1424,12 @@ div.hire-container button:hover
         width: 500px;
 
     }
+
+    /* CONTACT */
+    .form-container form 
+    {
+        padding: 35px 15px 35px 15px;
+    }
 }
 
 @media (max-width: 660px) 
@@ -1217,6 +1465,22 @@ div.hire-container button:hover
     {
         font-size: 28px;
     }
+
+    /* CONTACT */
+    .form-image
+    {
+        display: none;
+    }
+
+    /* CONTACT */
+    .form-container form 
+    {
+        width: 100%;
+        border: 2px solid var(--contact-form-bordercolor);
+        border-radius: .75rem;
+        padding: 35px 20px 35px 20px;
+    }
+
 }
 
 
@@ -1413,6 +1677,18 @@ div.hire-container button:hover
     {
         min-width: 100%;
     }
+
+    /* CONTACT */
+    #contact
+    {
+        padding: 35px 20px 35px 20px;
+    }
+
+    .submit-form
+    {
+        justify-content: center;
+        min-width: 100%;
+    }
 }
 
 @media (max-width: 365px) 
@@ -1429,7 +1705,28 @@ div.hire-container button:hover
         width: 240px;
     }
 
+    /* CONTACT */
+    
+    .first-lastname-container,
+    .contact-choice,
+    .brand-info
+    {
+        flex-direction: column;
+        gap: 35px;
+    }
 
+    .first-lastname-container .first-name,
+    .first-lastname-container .last-name,
+    .brand-info .brand-name,
+    .brand-info .brand-type,
+    .budget
+    {
+        width: 100%;
+    }
 
+    .submit-form input
+    {
+        font-size: 12px;
+    }      
 
 }
