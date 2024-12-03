@@ -6,6 +6,9 @@
     --lumina-sidebar-fontcolor : #000080;
     --lumina-sidebar-fontcolor-hover : #5656b9;
 
+    /* CONTROL PANEL */
+    --control-panel-bgcolor : black;
+
     /* -- COLORS -- */
     --main-bgcolor : #FEFEFE ;
     --main-bgcolor-secondary : #E1FBEE ;
@@ -72,3 +75,82 @@
     /* FONT */
     --general-font : "Signika", sans-serif;
 }
+
+
+[data-theme="dark"] 
+{
+        /* LUMINA */
+    --lumina-fontcolor : #ee8623;
+    --lumina-fontcolor-hover : #000080;
+    --lumina-sidebar-fontcolor : #000080;
+    --lumina-sidebar-fontcolor-hover : #5656b9;
+
+
+    /* CONTROL PANEL */
+    --control-panel-bgcolor : white;
+
+    /* -- COLORS -- */
+    --main-bgcolor : #121212 ;
+    --main-bgcolor-secondary : #121212 ;
+    --orange-main-fontcolor : #FF6F00 ;
+    --blue-main-fontcolor : #000080;
+
+    --hire-me-button-bgcolor : #FFA726;
+    --hire-me-sidebar-button-bgcolor : #000080;
+    --hire-me-button-fontcolor : #FEFEFE;
+    --hire-me-button-outline-color-hover : #000080;
+    --hire-me-button-outline-fontcolor-hover : #000080;
+
+    --burger-menu-bgcolor : #ee8623;
+    --burger-menu-line-color : white; 
+    --burger-menu-line-outline-color-hover : #000080; 
+
+    --sidebar-bgcolor : #ee8623;
+    --sidebar-border-color : #000080;
+
+    --about-me-main-sub-header-fontcolor : #85918b ;
+    --about-me-image-bordercolor : #FFA726 ;
+    --about-me-contact-bordercolor : #FFA726 ;
+
+    --technical-skill-square-outline-color : #808080;
+    --technical-skill-square-fontcolor-hover : #ee8623;
+    --technical-skill-square-outline-color-hover : #FFA726;
+    --technical-skill-square-shadow-color-hover : #FFA726;
+
+    --services-service-card-bgcolor : #E1FBEE;
+    --services-service-icon-outline-color : #FFA726;
+    --services-service-icon-border-color : gray;
+
+    --get-started-button-bgcolor : #FFA726;
+    --get-started-outline-color-hover : #000080;
+    --get-started-fontcolor-hover : #000080;
+    --get-started-fontcolor : #FFFFFF;
+
+    --project-toggler-bgcolor : #FFA726;
+    --project-toggler-fontcolor : #c06e22;
+    --project-toggler-buttons-bordercolor : #ee8623;
+    --project-toggler-buttons-bgcolor : #FEFEFE;
+    --project-toggler-buttons-bgcolor-active : #ee8623;
+    --project-toggler-buttons-fontcolor-active : #FEFEFE;
+    --project-toggler-buttons-bordercolor-active : #FEFEFE;
+    --project-body-bgcolor : rgba(0, 0, 0, 0.479);
+    --project-body-fontcolor : #FEFEFE;
+
+    --testimonials-switcher-bordercolor : #FFA726;
+    --testimonials-switcher-bgcolor-active : #FFA726;
+
+
+    --contact-bgcolor : #FEFEFE;
+    --contact-image-quote-color : #FFFFFF; 
+    --contact-form-bordercolor : #ee8623; 
+    --contact-fields-bordercolor : grey; 
+    --contact-fields-bordercolor-focus : #ee8623; 
+    --contact-fields-bgcolor : #FEFEFE; 
+    --contact-submit-btn-bgcolor : #ee8623; 
+    --contact-submit-btn-fontgcolor : #FEFEFE; 
+    --contact-submit-btn-fontgcolor-hover : #000080; 
+    --contact-submit-btn-outline-hover : #000080; 
+
+    --footer-separator-bgcolor : #FFA726;
+
+}   

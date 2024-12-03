@@ -3,10 +3,37 @@ const CloseSidebarButton = document.querySelector(".close-sidebar");
 const projectTogglerButton = document.querySelectorAll(".project-toggler"); /* Get project toggler button*/
 const switchers = document.querySelectorAll(".testimonial-switcher");
 const projectChoiceBtns = document.querySelectorAll("#rb1");
+const upToggler = document.querySelector(".up")
+const togglerImage = document.querySelector(".toggler")
+
 
 
 // TITLE : EVENT LISTENERS
 burgerMenu.addEventListener("click", toggleSidebar);
+
+// -SUB EVENT LISTENERS- HANDLE THE UP TOGGLER
+upToggler.addEventListener("click" , () => {
+    window.scroll({
+        top : 0,
+        behavior : 'smooth'
+    });
+});
+
+// -SUB EVENT LISTENERS- HANDLE THE THEME TOGGLER 
+togglerImage.addEventListener("click" , (event) => {
+    let imageSrc = event.target.getAttribute("src");
+    
+    if(imageSrc === "./images/dark-mode.svg")
+    {
+        event.target.setAttribute("src" , "./images/light-mode.svg");
+        document.documentElement.setAttribute('data-theme', "light");
+    }
+    else
+    {
+        event.target.setAttribute("src" , "./images/dark-mode.svg");
+        document.documentElement.setAttribute('data-theme', "dark");
+    }
+});
 
 // -SUB EVENT LISTENERS- HANDLER FOR RADIO BUTTONS IN CONTACT FORM
 projectChoiceBtns.forEach(radio => {

@@ -12,7 +12,40 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* CONTROL PANEL */
 
+.control-panel
+{
+    background-color: var(--control-panel-bgcolor);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    gap: 10px;
+    border-radius: 0.75rem;
+    z-index: 3;
+}
+
+.up,
+.toggler,
+.home
+{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+
+.up img,
+.toggler img,
+.home img
+{
+    width: 100%;
+    height: 100%;
+}
 /* Projects photo  */
 
 div#Builderon-project
