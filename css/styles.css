@@ -71,6 +71,14 @@ div#Etch-project
     background-size: cover;
     background-position: center;
 }
+
+div#Melkatech-project
+{
+    background: url("../images/melka-tech-project.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 /* --- GENERAL STYLE --- */
 
 .highlight
@@ -130,6 +138,7 @@ body
     font-family: var(--general-font);
     overflow-x: hidden;
     gap: 20px;
+    color: var(--default-fontcolor);
 }
 
 /* --- HEADER --- */
@@ -1107,6 +1116,11 @@ div.hire-container button:hover
     height: auto;
     gap: 30px;
     padding: 30px;
+}
+
+#contact label
+{
+    color: var(--contact-labels-fontcolor);
 }
 
 #contact .form-container

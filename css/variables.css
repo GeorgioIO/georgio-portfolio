@@ -11,6 +11,7 @@
 
     /* -- COLORS -- */
     --main-bgcolor : #FEFEFE ;
+    --default-fontcolor : #000000 ;
     --main-bgcolor-secondary : #E1FBEE ;
     --orange-main-fontcolor : #ee8623;
     --blue-main-fontcolor : #000080;
@@ -61,6 +62,7 @@
 
 
     --contact-bgcolor : #FEFEFE;
+    --contact-labels-fontcolor : #000000;
     --contact-image-quote-color : #FFFFFF; 
     --contact-form-bordercolor : #ee8623; 
     --contact-fields-bordercolor : grey; 
@@ -79,7 +81,9 @@
 
 [data-theme="dark"] 
 {
-        /* LUMINA */
+    --default-fontcolor : #FEFEFE ;
+
+    /* LUMINA */
     --lumina-fontcolor : #ee8623;
     --lumina-fontcolor-hover : #000080;
     --lumina-sidebar-fontcolor : #000080;
