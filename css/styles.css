@@ -1148,7 +1148,7 @@ div.hire-container button:hover
 
 #contact
 {
-    background-color: var(--main-bgcolor);
+    background-color: var(--main-bgcolor-secondary);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1400,7 +1400,7 @@ form .phone-number
     gap: 40px;
     width: 100%;
     height: auto;
-    background-color: var(--main-bgcolor-secondary);
+    background-color: var(--main-bgcolor);
 }
 
 .footer-head
