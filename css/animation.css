@@ -25,6 +25,12 @@
     }
 }
 
+@keyframes rotate 
+{
+    to {
+      transform: rotate(360deg);
+    }
+}
 
 
 .expand-project-fields

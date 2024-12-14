@@ -19,6 +19,18 @@ upToggler.addEventListener("click" , () => {
     });
 });
 
+// -SUB EVENT LISTENERS- HANDLE SCROLL 
+window.addEventListener(
+    "scroll",
+    () => {
+      document.body.style.setProperty(
+        "--scroll",
+        window.scrollY / (document.body.offsetHeight - window.innerHeight)
+      );
+    },
+    false
+  );
+
 // -SUB EVENT LISTENERS- HANDLE THE THEME TOGGLER 
 togglerImage.addEventListener("click" , (event) => {
     let imageSrc = event.target.getAttribute("src");

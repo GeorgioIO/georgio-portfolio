@@ -11,7 +11,7 @@
 
     /* -- COLORS -- */
     --main-bgcolor : #FEFEFE ;
-    --default-fontcolor : #000000 ;
+    --default-fontcolor : #121212 ;
     --main-bgcolor-secondary : #E1FBEE ;
     --orange-main-fontcolor : #ee8623;
     --blue-main-fontcolor : #000080;
@@ -39,6 +39,7 @@
     --technical-skill-square-shadow-color-hover : #ee8623;
 
     --services-service-card-bgcolor : #E1FBEE;
+    --services-service-card-fontcolor : #000000;
     --services-service-icon-outline-color : #ee8623;
     --services-service-icon-border-color : gray;
 
@@ -124,6 +125,7 @@
     --services-service-card-bgcolor : #E1FBEE;
     --services-service-icon-outline-color : #FFA726;
     --services-service-icon-border-color : gray;
+    --services-service-card-fontcolor : #121212;
 
     --get-started-button-bgcolor : #FFA726;
     --get-started-outline-color-hover : #000080;
